@@ -11,6 +11,7 @@
     <title>JavaWeb</title>
   </head>
   <body>
-    <h1 style="color: red">yjb123456</h1>
+    <h1 style="color: red">lisi</h1>
+    <h1 style="color: red">zhangsan</h1>
   </body>
 </html>
