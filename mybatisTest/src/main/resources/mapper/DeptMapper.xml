@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hbdmp.maven.mapper.DeptMapper">
+    <resultMap id="myDept" type="com.hbdmp.maven.bean.Dept">
+        <id column="id" property="id"></id>
+        <result column="dept_name" property="deptName"></result>
+        <result column="dept_code" property="deptCode"></result>
+    </resultMap>
+
+    <select id="getAllDeptResultType" resultType="com.hbdmp.maven.bean.Dept">
+        select id,dept_name deptName,dept_code deptCode from PUB_DEPT
+    </select>
+    <select id="getAllDeptResultMap" resultMap="myDept">
+        select * from PUB_DEPT
+    </select>
+    <insert id="insertDept" parameterType="com.hbdmp.maven.bean.Dept"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into PUB_DEPT(name ,code)
+        values (#{name},#{code})
+    </insert>
+</mapper>
