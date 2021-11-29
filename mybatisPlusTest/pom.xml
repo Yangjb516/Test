@@ -11,10 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hbdmp</groupId>
-    <artifactId>mybatisplustest</artifactId>
+    <artifactId>mybatisPlusTest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>mybatisplustest</name>
+    <name>mybatisPlusTest</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
