@@ -9,14 +9,14 @@
     </resultMap>
 
     <select id="getAllDeptResultType" resultType="com.hbdmp.maven.bean.Dept">
-        select id,dept_name deptName,dept_code deptCode from PUB_DEPT
+        select id,dept_name deptName,dept_code deptCode from tbl_dept
     </select>
     <select id="getAllDeptResultMap" resultMap="myDept">
-        select * from PUB_DEPT
+        select * from tbl_dept
     </select>
     <insert id="insertDept" parameterType="com.hbdmp.maven.bean.Dept"
             useGeneratedKeys="true" keyProperty="id">
-        insert into PUB_DEPT(name ,code)
+        insert into tbl_dept(name ,code)
         values (#{name},#{code})
     </insert>
 </mapper>

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -52,4 +53,21 @@ class MavendemoApplicationTests {
 //        queryWrapper.eq("name","CYS");
 //        System.out.println(deptService.list(queryWrapper));
 //    }
+
+    @Test
+    public void testT(){
+        int a = 1;
+        System.out.println(testTParam(a));
+        String s = "yjb";
+        System.out.println(testTParam(s));
+    }
+
+    //输入什么类型都可以。
+    //？：表示不确定的 java 类型。
+    //T (type)：表示具体的一个java类型。
+    //K V (key value) 分别代表java键值中的Key Value。
+    //E (element) ：代表Element，集合元素。
+    private <T> T testTParam(T t){
+        return t;
+    }
 }

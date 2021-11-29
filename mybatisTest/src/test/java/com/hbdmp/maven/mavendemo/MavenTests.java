@@ -16,4 +16,11 @@ public class MavenTests {
         MyStringUtil util = new MyStringUtil();
         System.out.println(util.hello("yjb"));
     }
+
+    @Test
+    public void testString(){
+        String s = "123456";
+        System.out.println(s.substring(0,4));
+    }
+
 }
