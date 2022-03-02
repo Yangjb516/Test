@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zixuan.mybatisPlus.mapper.EmployeeMapper">
+
+    <select id="selctPageVo" resultType="com.zixuan.mybatisPlus.bean.Employee">
+        select * from tbl_employee
+        where 1 = 1
+            <if test="lastName!=null and lastName!=''">
+                and last_name = #{lastName}
+            </if>
+    </select>
+</mapper>
