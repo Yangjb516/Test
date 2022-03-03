@@ -11,7 +11,7 @@
  Target Server Version : 80027
  File Encoding         : 65001
 
- Date: 02/03/2022 15:39:25
+ Date: 03/03/2022 22:45:24
 */
 
 SET NAMES utf8mb4;
@@ -40,11 +40,11 @@ CREATE TABLE `pub_book_evaluation`  (
 DROP TABLE IF EXISTS `pub_books`;
 CREATE TABLE `pub_books`  (
   `ID` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `CODE` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `BOOK_CODE` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `BOOK_NAME` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `AUTHOR` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `DESCRI` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `TYPE` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `BOOK_TYPE` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `PRESS` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `CUR_NUM` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `TOTAL_NUM` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -311,7 +311,7 @@ CREATE TABLE `tbl_employee`  (
   `gender` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `age` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tbl_employee
@@ -329,6 +329,17 @@ INSERT INTO `tbl_employee` VALUES (12, 'yjb', 'yjb@163.com', '1', 31);
 INSERT INTO `tbl_employee` VALUES (13, 'yjb', 'yjb@163.com', '1', 40);
 INSERT INTO `tbl_employee` VALUES (17, 'gss', 'gss@qq.com', '0', 30);
 INSERT INTO `tbl_employee` VALUES (18, 'gss', 'gss@qq.com', '0', 30);
+INSERT INTO `tbl_employee` VALUES (19, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (20, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (21, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (22, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (23, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (24, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (25, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (26, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (27, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (28, 'yjb', 'yjb@163.com', '1', 31);
+INSERT INTO `tbl_employee` VALUES (29, 'gss', 'gss@qq.com', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tbl_test
