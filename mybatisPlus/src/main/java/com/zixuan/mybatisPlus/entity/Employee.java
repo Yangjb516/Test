@@ -1,4 +1,4 @@
-package com.zixuan.mybatisPlus.bean;
+package com.zixuan.mybatisPlus.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 

@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zixuan.mybatisPlus.bean.Employee;
+import com.zixuan.mybatisPlus.entity.Employee;
 import com.zixuan.mybatisPlus.mapper.EmployeeMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @SpringBootTest
-class MybatisplustestApplicationTests {
+class MybatisPlusApplicationTests {
     @Resource
     private EmployeeMapper employeeMapper;
 
@@ -95,9 +95,11 @@ class MybatisplustestApplicationTests {
         Employee employee = new Employee();
         employee.setLastName("gss");
         employee.setEmail("gss@qq.com");
-        //updateStrategy = FieldStrategy.IGNORED    传真实值，如果不传，则为null，原数据将会改为null
+//        employee.setGender(9);
+//        employee.setAge(10);
+        //updateStrategy = FieldStrategy.IGNORED    不管有没有有设置属性，所有的字段都会设置到insert语句中
         int result = employeeMapper.update(employee,new UpdateWrapper<Employee>()
-            .in("id",17,18));
+            .in("id",29));
         System.out.println(result);
     }
 

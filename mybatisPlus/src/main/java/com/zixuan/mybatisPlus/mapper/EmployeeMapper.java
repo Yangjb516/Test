@@ -3,7 +3,7 @@ package com.zixuan.mybatisPlus.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zixuan.mybatisPlus.bean.Employee;
+import com.zixuan.mybatisPlus.entity.Employee;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
