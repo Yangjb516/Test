@@ -13,7 +13,7 @@ public class SpringbootApplication {
         //查看容器里的组件（只要有，就能为我们工作）
         String[] names = run.getBeanDefinitionNames();
         for (String name : names) {
-            System.out.println(name);
+//            System.out.println(name);
         }
     }
 
