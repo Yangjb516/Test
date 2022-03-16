@@ -1,0 +1,33 @@
+person:
+  userName: zhangsan
+  boss: false
+  birth: 2022/03/16 20:00:00
+  age: 30
+#  pet: {name: 小白,weight: 20}
+  pet:
+    name: 小白1
+    weight: 21
+#  interests: [看书,篮球,足球]
+  interests:
+    - 看书1
+    - 篮球1
+    - 足球1
+#  animal: [猫,狗]
+  animal:
+    - 猫1
+    - 狗1
+#  score: {english: 80, math: 90}
+  score:
+    english: 81
+    math: 91
+  salarys: [19000,18000]
+#  salarys:
+#    - 9000
+#    - 8000
+  all-pets:
+    good:
+      - {name: 1,weight: 11}
+      - name: 2
+        weight: 22
+    bad:
+      [{name: 3,weight: 33},{name: 4,weight: 44}]
