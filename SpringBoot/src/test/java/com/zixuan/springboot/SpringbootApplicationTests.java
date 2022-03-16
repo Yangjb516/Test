@@ -3,6 +3,8 @@ package com.zixuan.springboot;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,4 +33,12 @@ class SpringbootApplicationTests {
         }
     }
 
+    @Test
+    void testDate() {
+        String strDate = "2022-03-16";
+        String pattern = "";
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(pattern);
+        LocalDate localDate = LocalDate.parse(strDate, dateTimeFormatter);
+        System.out.println(localDate);
+    }
 }
