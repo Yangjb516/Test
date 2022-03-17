@@ -1,6 +1,6 @@
 package com.zixuan.mybatis;
 
-import com.hbdmp.util.MyStringUtil;
+import com.zixuan.util.MyStringUtil;
 import org.apache.commons.collections4.CollectionUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.StringUtils;

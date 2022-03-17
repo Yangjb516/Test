@@ -1,4 +1,4 @@
-package com.hbdmp.util;
+package com.zixuan.util;
 
 /**
  * author yjb
