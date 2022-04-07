@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地
+ Source Server         : 本机
  Source Server Type    : MySQL
- Source Server Version : 80027
+ Source Server Version : 80028
  Source Host           : localhost:3306
  Source Schema         : test
 
  Target Server Type    : MySQL
- Target Server Version : 80027
+ Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 03/03/2022 22:45:24
+ Date: 07/04/2022 16:36:49
 */
 
 SET NAMES utf8mb4;
@@ -35,6 +35,10 @@ CREATE TABLE `pub_book_evaluation`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '图书评价' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of pub_book_evaluation
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for pub_books
 -- ----------------------------
 DROP TABLE IF EXISTS `pub_books`;
@@ -56,7 +60,12 @@ CREATE TABLE `pub_books`  (
   `BOR_NUM` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '借阅次数',
   `RE_BOR_NUM` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '续借次数',
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '图书' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pub_books
+-- ----------------------------
+INSERT INTO `pub_books` VALUES ('1', '1', '1', '1', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for pub_data_lib
@@ -74,7 +83,11 @@ CREATE TABLE `pub_data_lib`  (
   `CREATE_DATE` datetime(0) NULL DEFAULT NULL,
   `UPDATE_DATE` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '数据字典' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pub_data_lib
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for pub_e_books
@@ -93,7 +106,11 @@ CREATE TABLE `pub_e_books`  (
   `QY_FLAG` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `SC_FLAG` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '电子书' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pub_e_books
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for pub_menu
@@ -112,7 +129,11 @@ CREATE TABLE `pub_menu`  (
   `CREATE_DATE` datetime(0) NULL DEFAULT NULL,
   `UPDATE_DATE` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '菜单' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pub_menu
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for pub_users
@@ -130,7 +151,7 @@ CREATE TABLE `pub_users`  (
   `UPDATE_DATE` datetime(0) NULL DEFAULT NULL,
   `CREDIT_LEV` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pub_users
@@ -163,24 +184,8 @@ CREATE TABLE `pub_users_books`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户的借阅' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for table_test
+-- Records of pub_users_books
 -- ----------------------------
-DROP TABLE IF EXISTS `table_test`;
-CREATE TABLE `table_test`  (
-  `ID` int(0) NOT NULL AUTO_INCREMENT,
-  `NAME` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `CODE` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME1` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME2` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME3` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME4` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME5` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME6` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME7` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `NAME8` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`ID`) USING BTREE,
-  UNIQUE INDEX `NAME1_INDEX`(`NAME1`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for tbl_dept
@@ -191,7 +196,7 @@ CREATE TABLE `tbl_dept`  (
   `DEPT_NAME` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `DEPT_CODE` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '测试-部门' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tbl_dept
@@ -311,7 +316,7 @@ CREATE TABLE `tbl_employee`  (
   `gender` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `age` int(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '测试-员工' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tbl_employee
@@ -349,7 +354,7 @@ CREATE TABLE `tbl_test`  (
   `ID` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `NAME` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '测试' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '测试-测试' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tbl_test
